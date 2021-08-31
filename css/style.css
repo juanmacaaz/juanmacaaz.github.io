@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    padding: 5%;
 }
 
 body {
@@ -51,12 +52,29 @@ a:hover {
 
 img {
     max-width: 100%;  
-    height: auto;  
+    height: auto;
     display: inline-block;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
+.logo {
+    height: 32px;
+    width: 32px;
+}
+
+.clikeable:hover {
+    cursor: pointer;
+    color: teal;
+}
+
+iframe {
+    max-width: 100%;  
+    height: auto;
+    display: inline-block;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 /*
     Cabezera
 */
@@ -84,6 +102,11 @@ img {
     width: 50%;
 }
 
+.filters li:hover{
+    cursor: pointer;
+    color: teal;
+}
+
 /*
     Proyectos
 */
@@ -93,11 +116,14 @@ img {
     border-top-style: solid;
     margin-top: 10%;
     padding-top: 2%;
+    min-height: 450px;
+    min-width: 350px;
 }
 
 .max {
     max-width: 1500px;
-    max-height: 300px;
+    max-height: 350px;
+    padding-bottom: 10%;
 }
 
 tag:hover {
@@ -106,11 +132,27 @@ tag:hover {
 }
 
 .zoom-img {
-    transition: transform .5s;
+    transition: opacity 1.5s;
 }
 
 .zoom-img:hover {
     position: relative;
     left: -25%;
     transform: scale(1.8);
+}
+
+.zoom-img:hover::before  {
+    pointer-events: none;
+    z-index: 1;
+}
+
+/*
+    Footer
+*/
+
+.footer {
+    margin-top: 15%;
+    padding: 10px;
+    border-top: white;
+    border-top-style: solid;
 }

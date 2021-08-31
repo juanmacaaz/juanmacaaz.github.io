@@ -14,3 +14,11 @@ function clickC__(elm) {
         proyectsSelected[i].style.display = "block"
     }
 }
+
+function reset() {
+    let proyects = document.getElementsByClassName('p-item');
+
+    for (let i = 0; i < proyects.length; i++) {
+        proyects[i].style.display = "block"
+    }
+}

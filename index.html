@@ -39,9 +39,10 @@
         Here I show you the main projects that I have carried out throughout my journey as a programmer.
         Notice that some of them have been created when I still had little knowledge of programming.
         I hope that throughout my life both the quality of my projects and the code will be better.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Voluptates expedita neque nisi aliquid iusto porro omnis sint at officiis 
-        deserunt natus voluptatem quo provident libero harum dignissimos, dolorem vero delectus?
+        I have created all kinds of projects from simulators of logic circuits, through programming contests
+        to dealing with graphics with opengl.
+        Also as you can see the web design is not my thing 
+        Although I do not rule out putting myself to work with it.
     </p>
 
     <!--
@@ -50,7 +51,7 @@
 
     <div class="filters">
 
-        <p> Filters </p> <br>
+        <p> TAG Filters </p>
 
         <ul class="list-unstyled row">
             <li onclick="clickC__(this)" class="list-item col-4">OpenCV</li>
@@ -59,55 +60,63 @@
             <li onclick="clickC__(this)" class="list-item col-4">IA</li>
             <li onclick="clickC__(this)" class="list-item col-4">Games</li>
             <li onclick="clickC__(this)" class="list-item col-4">OpenGL</li>
-            <li onclick="clickC__(this)" class="list-item col-4">Simulations</li>
+            <li onclick="clickC__(this)" class="list-item col-4">QT</li>
+            <li onclick="clickC__(this)" class="list-item col-4">Simulation</li>
+            
        </ul>
-
+       
+       <p class="clikeable" onclick = reset()> Show all </p>
     </div>
 
     <!--
         Proyectos
     -->
 
-    <div class="p-item max C++ OpenGL">
+    <!-- LogicSimulator -->
+
+    <div class="p-item max C++ QT Simulation">
         <div class="container">
             <div class="row">
                 <div class="d-flex">
                     <div class="p-2">
-                        <h3>
-                            LogicSimulator C++ OpenGL
-                        </h3>
+                        <a href="https://github.com/juanmacaaz/LogicSimulator">
+                            <h3>
+                                LogicSimulator
+                            </h3>
+                        </a>
                     </div>
                     <div class="p-3">
-                        Marzo 2020
+                        February 2020
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col overflow-auto max">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Voluptates expedita neque nisi aliquid iusto porro omnis sint at officiis 
-                        deserunt natus voluptatem quo provident libero harum dignissimos, dolorem vero delectus?
+                        This project is about a certain simulator with logic gates,
+                        the gates that you can implement are and, xor, not and or.
+                        It has been programmed in C ++ with the QT workbench.       
+                        Allows you to save and load diagrams.
+                        Export the diagram to VHDL and calculate the minterms.
                     </p>
-                    <a target=”_blank” href="https://github.com/juanmacaaz/LogicSimulator"> <img src="resources/img/GitHub-Mark-Light-32px.png" alt="Logo Github"> </a>
+                    <a target=”_blank” href="https://github.com/juanmacaaz/LogicSimulator"> <img class="logo" src="resources/img/GitHub-Mark-Light-32px.png" alt="Logo Github"> </a>
                     <div class="tags">
                         <div class="d-flex">
                             <div class="p-2">Tags:</div>
                             <div class="p-2"> <tag onclick='clickC__(this)'> C++ </tag> </div>
-                            <div class="p-2"> <tag> QT </tag> </div>
-                            <div class="p-2"> <tag> Simulator </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> Simulation </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> QT </tag> </div>
                         </div>
                     </div>
                     <div class="d-flex">
                         <div class="p-2">Colaborators:</div>
-                        <div class="p-2"> <a target=”_blank” href="https://github.com/juanmacaaz"> Juanma Camara </a> </div>
+                        <div class="p-2"> <a target=”_blank” href="https://github.com/juanmacaaz"> Juanma(Me) </a> </div>
+                        <div class="p-2"> <a target=”_blank” href="https://github.com/eric5512"> Eric </a> </div>
                     </div>
                     <a href="#top">Back to top</a>
                 </div>
                 <div class="col zoom-img">
                     <div class="overflow-auto max">
-                        <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
-                        <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
                         <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
                     </div> 
                 </div>
@@ -115,53 +124,120 @@
         </div>
     </div>
 
-    <div class="p-item max Games Python">
+    <!-- BonAreaIA -->
+
+    <div class="p-item max Python IA OpenCV">
         <div class="container">
             <div class="row">
                 <div class="d-flex">
                     <div class="p-2">
-                        <h3>
-                            LogicSimulator Games Python
-                        </h3>
+                        <a href="https://github.com/juanmacaaz/BonAreaIA">
+                            <h3>
+                                BonAreaIA
+                            </h3>
+                        </a>
                     </div>
                     <div class="p-3">
-                        Marzo 2020
+                        November 2020
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col overflow-auto max">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Voluptates expedita neque nisi aliquid iusto porro omnis sint at officiis 
-                        deserunt natus voluptatem quo provident libero harum dignissimos, dolorem vero delectus?
+                        The system works through a neural network called Yolo v3 which checks the images
+                        in real time and labels them looking for holes in the shelves of refrigerators.
+                        It saves the coordinates of these gaps, and then sends this information to the mobile application.
+                        The application reads the data received and counts how many holes there are and in which area
+                        of ​​the refrigerator they are. It then notifies the user of any product deficiencies in the refrigerator,
+                        how much, and in what area. Because the images are analyzed in real time, if an employee receives a
+                        notification of a gap and fills it, the notification will automatically disappear in the application
+                        and mark the refrigerator as full again.
                     </p>
-                    <a target=”_blank” href="https://github.com/juanmacaaz/LogicSimulator"> <img src="resources/img/GitHub-Mark-Light-32px.png" alt="Logo Github"> </a>
+                    <a target=”_blank” href="https://github.com/juanmacaaz/BonAreaIA"> <img class="logo" src="resources/img/GitHub-Mark-Light-32px.png" alt="Logo Github"> </a>
+                    <a target=”_blank” href="https://devpost.com/software/bonarea-ia"> <img class="logo" src="resources/img/devpost-seeklogo.com.svg" alt="Logo Github"> </a>
                     <div class="tags">
                         <div class="d-flex">
                             <div class="p-2">Tags:</div>
-                            <div class="p-2"> <tag onclick='clickC__(this)'> C++ </tag> </div>
-                            <div class="p-2"> <tag> QT </tag> </div>
-                            <div class="p-2"> <tag> Simulator </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> Python </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> OpenCV </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> IA </tag> </div>
                         </div>
                     </div>
                     <div class="d-flex">
                         <div class="p-2">Colaborators:</div>
-                        <div class="p-2"> <a target=”_blank” href="https://github.com/juanmacaaz"> Juanma Camara </a> </div>
+                        <div class="p-2"> <a target=”_blank” href="https://github.com/juanmacaaz"> Juanma(Me) </a> </div>
+                        <div class="p-2"> <a target=”_blank” href="https://github.com/polespinasa"> Pol </a> </div>
+                        <div class="p-2"> <a target=”_blank” href=""> Dani </a> </div>
                     </div>
                     <a href="#top">Back to top</a>
                 </div>
                 <div class="col zoom-img">
                     <div class="overflow-auto max">
-                        <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
-                        <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
-                        <img src="resources/img/LogicSimulator.png" alt="Logic Simulator">
+                        <img src="resources/img/bonArea.jpg" alt="BonAreaIA">
+                        <iframe width="660" height="315" src="https://www.youtube.com/embed/N1yAJMRqBLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div> 
                 </div>
             </div>
         </div>
     </div>
 
+    <!--
+        EASTLabeling
+    -->
+
+    <div class="p-item max Python IA OpenCV">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex">
+                    <div class="p-2">
+                        <a href="https://github.com/juanmacaaz/EASTLabeling">
+                            <h3>
+                                EASTLabeling
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        January 2021
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col overflow-auto max">
+                    <p>
+                        This program is used to label training images for the EAST neural network model. It is very simple and light to use. It is created in a few hours.
+                    </p>
+                    <a target=”_blank” href="https://github.com/juanmacaaz/EASTLabeling"> <img class="logo" src="resources/img/GitHub-Mark-Light-32px.png" alt="Logo Github"> </a>
+                    <div class="tags">
+                        <div class="d-flex">
+                            <div class="p-2">Tags:</div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> Python </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> OpenCV </tag> </div>
+                            <div class="p-2"> <tag onclick='clickC__(this)'> IA </tag> </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="p-2">Colaborators:</div>
+                        <div class="p-2"> <a target=”_blank” href="https://github.com/juanmacaaz"> Juanma(Me) </a> </div>
+                    </div>
+                    <a href="#top">Back to top</a>
+                </div>
+                <div class="col zoom-img">
+                    <div class="overflow-auto max">
+                        <img src="resources/img/EASTLabeling/1.png" alt="EASTLabeling">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        Footer
+    -->
+
+    <div class="footer">
+        Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program. Linus Torvalds.
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 
