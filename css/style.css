@@ -1,0 +1,116 @@
+/*
+    Global tags
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: #141414;
+    font-family: 'Courier New', sans-serif;
+    color: white;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 1%;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: teal;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+img {
+    max-width: 100%;  
+    height: auto;  
+    display: inline-block;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/*
+    Cabezera
+*/
+
+.cabezera .container .row .col {
+    text-align: center;
+    font-size: x-large;
+}
+
+.cabezera {
+    border-style: solid none solid none;
+    border-width: 1px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-bottom: 2%;
+}
+
+/*
+    Filters
+*/
+
+.filters {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+/*
+    Proyectos
+*/
+
+.p-item {
+    border: #323232;
+    border-top-style: solid;
+    margin-top: 10%;
+    padding-top: 2%;
+}
+
+.max {
+    max-width: 1500px;
+    max-height: 300px;
+}
+
+tag:hover {
+    cursor: pointer;
+    color: teal;
+}
+
+.zoom-img {
+    transition: transform .5s;
+}
+
+.zoom-img:hover {
+    position: relative;
+    left: -25%;
+    transform: scale(1.8);
+}
