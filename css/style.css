@@ -8,7 +8,7 @@ html {
 }
 
 body {
-
+    font-size: 18px;
     background-color: #141414;
     font-family: 'Courier New', sans-serif;
     color: white;
@@ -51,7 +51,7 @@ a:hover {
 }
 
 img {
-    max-width: 100%;  
+    max-width: 100%; 
     height: auto;
     display: inline-block;
     object-fit: contain;
@@ -73,8 +73,12 @@ iframe {
     height: auto;
     display: inline-block;
     object-fit: contain;
-    margin-bottom: 15px;
 }
+
+p {
+    text-align: justify;
+}
+
 /*
     Cabezera
 */
@@ -97,6 +101,12 @@ iframe {
 */
 
 .filters {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.filters p {
     text-align: center;
     margin: auto;
     width: 50%;
