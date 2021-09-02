@@ -156,6 +156,37 @@ tag:hover {
 }
 
 /*
+    Contact
+*/
+
+.social-item {
+    margin-top: 25px;
+}
+
+.social-logo {
+    margin-top: auto;
+    text-align: right;
+}
+
+.social-name {
+    font-size: 45px;
+}
+
+.social-user {
+    position: relative;
+    top: -15px;
+    left: -10px;
+}
+
+.social-info {
+    position: relative;
+    top: 15px;
+}
+
+.social-img {
+    max-width: 120px;
+}
+/*
     Footer
 */
 
