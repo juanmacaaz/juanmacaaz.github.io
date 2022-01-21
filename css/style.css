@@ -25,6 +25,17 @@ h2 {
     text-align: center;
 }
 
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: teal;
+    cursor: pointer
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -32,6 +43,7 @@ a {
 
 a:hover {
     color: teal;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -77,6 +89,15 @@ iframe {
 
 p {
     text-align: justify;
+}
+
+#glcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /*
