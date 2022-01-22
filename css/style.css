@@ -138,6 +138,10 @@ p {
     color: teal;
 }
 
+.filtro-activado {
+    color: teal;
+}
+
 /*
     Proyectos
 */
@@ -206,6 +210,15 @@ tag:hover {
 
 .social-img {
     max-width: 120px;
+}
+
+@media (max-width: 460px) {
+    .social-img {
+        max-width: 45px;
+    }
+    .social-name {
+        font-size: 30px;
+    }
 }
 
 /*

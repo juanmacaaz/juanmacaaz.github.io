@@ -20,7 +20,7 @@
 
     <p> TAG Filters </p>
 
-    <ul class="list-unstyled row">
+    <ul id="filtros" class="list-unstyled row">
         <li onclick="clickC__(this)" class="list-item col-4">OpenCV</li>
         <li onclick="clickC__(this)" class="list-item col-4">C++</li>
         <li onclick="clickC__(this)" class="list-item col-4">Python</li>
@@ -29,10 +29,9 @@
         <li onclick="clickC__(this)" class="list-item col-4">OpenGL</li>
         <li onclick="clickC__(this)" class="list-item col-4">QT</li>
         <li onclick="clickC__(this)" class="list-item col-4">Simulation</li>
-
     </ul>
 
-    <p class="clikeable" onclick=reset()> Show all </p>
+    <p id="reset-filtros" class="clikeable filtro-activado" onclick=reset()> Show all </p>
 </div>
 
 <!--

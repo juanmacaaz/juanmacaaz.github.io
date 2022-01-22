@@ -3,15 +3,25 @@
 
 function clickC__(elm) {
     let proyects = document.getElementsByClassName('p-item');
-
+    console.log(elm);
     for (let i = 0; i < proyects.length; i++) {
         proyects[i].style.display = 'none';
     }
 
     let proyectsSelected = document.getElementsByClassName(elm.textContent);
     for (let i = 0; i < proyects.length; i++) {
-        proyectsSelected[i].style.display = 'block';
+        try {
+            proyectsSelected[i].style.display = 'block';
+        } catch (error) {}
     }
+
+    $('#filtros li').each(function (i, obj) {
+        $(obj).removeClass('filtro-activado');
+    });
+
+    $('#reset-filtros').removeClass('filtro-activado');
+
+    $(elm).addClass('filtro-activado');
 }
 
 function set_view(name) {
@@ -24,6 +34,12 @@ function reset() {
     for (let i = 0; i < proyects.length; i++) {
         proyects[i].style.display = 'block';
     }
+
+    $('#filtros li').each(function (i, obj) {
+        $(obj).removeClass('filtro-activado');
+    });
+
+    $('#reset-filtros').addClass('filtro-activado');
 }
 
 $('#header').load('view/header.html');
