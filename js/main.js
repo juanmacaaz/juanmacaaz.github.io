@@ -19,6 +19,10 @@ function clickC__(elm) {
         $(obj).removeClass('filtro-activado');
     });
 
+    $('tag').each(function (i, obj) {
+        $(obj).removeClass('filtro-activado');
+    });
+
     $('#reset-filtros').removeClass('filtro-activado');
 
     $(elm).addClass('filtro-activado');
@@ -36,6 +40,10 @@ function reset() {
     }
 
     $('#filtros li').each(function (i, obj) {
+        $(obj).removeClass('filtro-activado');
+    });
+
+    $('tag').each(function (i, obj) {
         $(obj).removeClass('filtro-activado');
     });
 
