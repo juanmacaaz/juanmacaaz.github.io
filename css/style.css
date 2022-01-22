@@ -180,6 +180,12 @@ tag:hover {
     z-index: 1;
 }
 
+@media (max-width: 460px) {
+    .descripcion {
+        font-size: 11px;
+    }
+}
+
 /*
     Contact
 */
