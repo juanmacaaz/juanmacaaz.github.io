@@ -207,6 +207,16 @@ tag:hover {
 .social-img {
     max-width: 120px;
 }
+
+/*
+    Others
+*/
+
+#golcanvas {
+    margin: auto;
+    z-index: -1;
+}
+
 /*
     Footer
 */

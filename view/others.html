@@ -3,3 +3,91 @@
 </h2>
 
 <p> Nothing around here yet... </p>
+
+<div id="golcanvas"> </div>
+
+<script>
+
+    var golSketch = function (p) {
+
+        // Game of life
+
+        const NUMBER_OF_CELLS = 30;
+        const CELL_SIZE = (p.windowWidth - p.windowWidth * 0.2) / NUMBER_OF_CELLS;
+        
+        let cells = [];
+
+        p.setup = function () {
+            
+            var canvas = p.createCanvas(NUMBER_OF_CELLS * CELL_SIZE, NUMBER_OF_CELLS * CELL_SIZE);
+            canvas.parent('golcanvas');
+            p.frameRate(3);
+            p.noStroke();
+            for (let i = 0; i < NUMBER_OF_CELLS; i++) {
+                cells[i] = [];
+                for (let j = 0; j < NUMBER_OF_CELLS; j++) {
+                    cells[i][j] = p.random(0, 1) > 0.5 ? 1 : 0;
+                }
+            }
+        }
+        
+        function count_neighbours(x, y) {
+            count = 0;
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i == 0 && j == 0) {
+                        continue;
+                    }
+                    if (x + i < 0 || x + i >= NUMBER_OF_CELLS || y + j < 0 || y + j >= NUMBER_OF_CELLS) {
+                        continue;
+                    }
+                    count += cells[x + i][y + j];
+                }
+            }
+            return count;
+        }
+
+        function new_generation() {
+            let new_cells = [];
+            for (let i = 0; i < NUMBER_OF_CELLS; i++) {
+                new_cells[i] = [];
+                for (let j = 0; j < NUMBER_OF_CELLS; j++) {
+                    let count = count_neighbours(i, j);
+                    if (cells[i][j] == 1) {
+                        if (count < 2 || count > 3) {
+                            new_cells[i][j] = 0;
+                        } else {
+                            new_cells[i][j] = 1;
+                        }
+                    } else {
+                        if (count == 3) {
+                            new_cells[i][j] = 1;
+                        } else {
+                            new_cells[i][j] = 0;
+                        }
+                    }
+                }
+            }
+            return new_cells;
+        }
+
+        function draw_cell(x, y, state) {
+            p.fill(255, state == 1 ? 25 : 0);
+            p.rect(NUMBER_OF_CELLS * CELL_SIZE - x * CELL_SIZE, NUMBER_OF_CELLS * CELL_SIZE - y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+        }
+
+        p.draw = function() {
+            p.clear();
+            cells = new_generation();
+            for (let i = 0; i < NUMBER_OF_CELLS; i++) {
+                for (let j = 0; j < NUMBER_OF_CELLS; j++) {
+                    draw_cell(i, j, cells[i][j]);
+                }
+            }
+            
+        }
+    }
+
+    var golp5 = new p5(golSketch);
+
+</script>
