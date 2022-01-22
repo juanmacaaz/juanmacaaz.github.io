@@ -214,6 +214,7 @@ tag:hover {
 
 #golcanvas {
     margin: auto;
+    display: block;
     z-index: -1;
 }
 

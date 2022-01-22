@@ -8,18 +8,20 @@
 
 <script>
 
+// timeOut
+
     var golSketch = function (p) {
 
         // Game of life
+        let width = document.getElementById('golcanvas').getBoundingClientRect().width;
 
         const NUMBER_OF_CELLS = 30;
-        const CELL_SIZE = (p.windowWidth - p.windowWidth * 0.2) / NUMBER_OF_CELLS;
+        const CELL_SIZE = width / NUMBER_OF_CELLS;
         
         let cells = [];
 
         p.setup = function () {
-            
-            var canvas = p.createCanvas(NUMBER_OF_CELLS * CELL_SIZE, NUMBER_OF_CELLS * CELL_SIZE);
+            var canvas = p.createCanvas(width, width);
             canvas.parent('golcanvas');
             p.frameRate(3);
             p.noStroke();
