@@ -173,7 +173,7 @@ tag:hover {
 .zoom-img:hover {
     position: relative;
     left: -25%;
-    transform: scale(1.8);
+    transform: scale(2);
 }
 
 .zoom-img:hover::before  {
